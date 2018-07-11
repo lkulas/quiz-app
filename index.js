@@ -125,28 +125,28 @@ function renderQuestion() {
 function generateQuestion() {
     return (`<h2>${QUIZ[questionNumber].question}</h2>
         <form>
-          <fieldset>
+          <fieldset role="radiogroup">
           <div class="radio">
-            <label class="input">
-              <input type="radio" value="${QUIZ[questionNumber].answers[0]}" name="answer" required>
+            <label class="input" id="answer1">
+              <input type="radio" value="${QUIZ[questionNumber].answers[0]}" aria-labelledby="answer1" required>
               <span class="checkmark">${QUIZ[questionNumber].answers[0]}</span>
             </label>
           </div>
           <div class="radio">
-            <label class="input">
-              <input type="radio" value="${QUIZ[questionNumber].answers[1]}" name="answer" required>
+            <label class="input" id="answer2">
+              <input type="radio" value="${QUIZ[questionNumber].answers[1]}" aria-labelledby="answer2" required>
               <span>${QUIZ[questionNumber].answers[1]}</span>
             </label>
           </div>
           <div class="radio">
-            <label class="input">
-              <input type="radio" value="${QUIZ[questionNumber].answers[2]}" name="answer" id="radio1" required>
+            <label class="input" id="answer3">
+              <input type="radio" value="${QUIZ[questionNumber].answers[2]}" aria-labelledby="answer3" required>
               <span>${QUIZ[questionNumber].answers[2]}</span>
             </label>
           </div>
           <div class="radio">
-            <label class="input">
-              <input type="radio" value="${QUIZ[questionNumber].answers[3]}" name="answer" required>
+            <label class="input" id="answer4">
+              <input type="radio" value="${QUIZ[questionNumber].answers[3]}" aria-labelledby="answer4" required>
               <span class="checkmark">${QUIZ[questionNumber].answers[3]}</span>
             </label>
           </div>
